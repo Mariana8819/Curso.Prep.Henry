@@ -29,7 +29,7 @@ const nuevoModulo = 21 % 5 === 1;
 function devolverString(str) {
   // "Return" la string provista: str
   // Tu código:
-  retur str;
+  return str;
 }
 
 
@@ -75,7 +75,7 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  return str1.lenght === str2.lenght;
+  return str1.length === str2.length;
 }
 
 function menosQueNoventa(num) {
@@ -150,13 +150,6 @@ function elevar(num, exponent) {
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  var resto =num%1;
-  var entero=num -resto;
-if (entero >=0.5) {
-  return entero +1;  
-} else {
-  return entero;  
-}
 return Math.round (num);
 }
 
@@ -177,14 +170,16 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (num===0); {
-    return false;    
-  } else if (num>0){
-return "Es positivo";    
-  } else {
-    return "Es negativo";
+  if(numero===0){
+    return false;     
+  } else if (numero>0){
+    return "Es positivo"
+  }
+   else {
+    return "Es negativo"
   } 
 }
+
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
@@ -197,7 +192,7 @@ function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  var combinado = "nombre" +" " + "apellido";
+  var combinado = nombre +" "+apellido;
   return combinado;
 }
 
@@ -205,7 +200,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return "Hola" + nombre +"!";
+  return "Hola" +" "+ nombre +"!";
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -233,7 +228,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  return euro*0.97;
+  return euro*1.2
 }
 
 
@@ -246,7 +241,7 @@ function esVocal(letra){
   if (letra.lenght >1) {
     return "Dato incorrecto";
   } 
-  if(letra==="a" || letra==="e" ||letra==="i"||letra===o""||letra==="u"){
+  if(letra==="a" || letra==="e" ||letra==="i"||letra==="o"||letra==="u"){
     return "Es vocal";
   }else{
     return "Dato incorrecto";
